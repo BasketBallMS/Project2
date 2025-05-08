@@ -67,7 +67,7 @@ class Vote(QMainWindow, Ui_MainWindow):
         with open('data.csv', 'a') as file:
             file.writelines(f'Voter {Vote_ID} voted for {chosen}\n')
         self.Submitted_Label.setText("Saved")
-        self.Submitted_Label.setStyleSheet("color: green;")
+        self.Submitted_Label.setStyleSheet("color: green")
 
         self.total_votes()
 
@@ -88,7 +88,7 @@ class Vote(QMainWindow, Ui_MainWindow):
                 raise ValueError
         except ValueError:
             self.Submitted_Label.setText("Invalid Fill IN")
-            self.Submitted_Label.setStyleSheet("color: red;")
+            self.Submitted_Label.setStyleSheet("color: red")
             self.clear_answer()
             return None
         return Fill_text
