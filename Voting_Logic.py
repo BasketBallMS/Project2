@@ -35,7 +35,7 @@ class Vote(QMainWindow, Ui_MainWindow):
 
         except ValueError:
             self.Submitted_Label.setText("Invalid Voting ID")
-            self.Submitted_Label.setStyleSheet("color: red;")
+            self.Submitted_Label.setStyleSheet("color: red")
             self.clear_answer()
             return None
         return Vote_ID
@@ -58,7 +58,7 @@ class Vote(QMainWindow, Ui_MainWindow):
              raise TypeError
         except TypeError:
             self.Submitted_Label.setText("Please Select an Option")
-            self.Submitted_Label.setStyleSheet("color: red;")
+            self.Submitted_Label.setStyleSheet("color: red")
             self.__voting_list.remove(Vote_ID)
             self.clear_answer()
             return
