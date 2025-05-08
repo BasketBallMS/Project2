@@ -1,0 +1,8 @@
+Voter 1 voted for John
+Jane = 0 John = 1 
+Voter 2 voted for Jane
+Jane = 1 John = 1 
+Voter 3 voted for Michael
+Jane = 1 John = 1 Michael = 1 
+Voter 4 voted for Michael
+Jane = 1 John = 1 Michael = 2 
