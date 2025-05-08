@@ -65,7 +65,7 @@ class Vote(QMainWindow, Ui_MainWindow):
 
 
         with open('data.csv', 'a') as file:
-            file.writelines(f'Voter {Vote_ID} voted for {chosen}')
+            file.writelines(f'Voter {Vote_ID} voted for {chosen}\n')
         self.Submitted_Label.setText("Saved")
         self.Submitted_Label.setStyleSheet("color: green;")
 
@@ -99,7 +99,7 @@ class Vote(QMainWindow, Ui_MainWindow):
         """
         with open('data.csv', 'a') as file:
             for names, votes in self.__voting_dictionary.items():
-                file.writelines(f'\n{names} = {votes}' + " ")
+                file.writelines(f'{names} = {votes}' + " ")
             file.write('\n')
         self.clear_answer()
 
